@@ -8,11 +8,11 @@
 
     <template v-else>
       <q-infinite-scroll ref="scroller" @load="loadMore">
-        <q-list link no-border :dark="theme == 'dark'" class="scala-list tx-list">
+        <q-list link no-border :dark="theme == 'dark'" class="Holoyolo-list tx-list">
           <q-item
             v-for="tx in tx_list_paged"
             :key="`${tx.txid}-${tx.type}`"
-            class="scala-list-item transaction"
+            class="Holoyolo-list-item transaction"
             :class="'tx-' + tx.type"
             @click.native="details(tx)"
           >
@@ -21,7 +21,7 @@
             </q-item-section>
             <q-item-label class="main">
               <q-item-label class="amount">
-                <FormatScala :amount="tx.amount" />
+                <FormatHoloyolo :amount="tx.amount" />
               </q-item-label>
               <q-item-label caption>{{ tx.txid }}</q-item-label>
             </q-item-label>
@@ -68,7 +68,7 @@ const { clipboard } = require("electron");
 import { mapState } from "vuex";
 import { QSpinnerDots } from "quasar";
 import TxDetails from "components/tx_details";
-import FormatScala from "components/format_scala";
+import FormatHoloyolo from "components/format_Holoyolo";
 import { i18n } from "boot/i18n";
 
 export default {
@@ -95,7 +95,7 @@ export default {
   components: {
     QSpinnerDots,
     TxDetails,
-    FormatScala
+    FormatHoloyolo
   },
   props: {
     limit: {
@@ -315,7 +315,7 @@ export default {
 
 <style lang="scss">
 .tx-list {
-  .scala-list-item {
+  .Holoyolo-list-item {
     padding-top: 0;
     padding-bottom: 0;
   }

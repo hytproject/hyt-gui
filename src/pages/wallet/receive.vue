@@ -1,6 +1,6 @@
 <template>
   <q-page class="receive">
-    <q-list link no-border :dark="theme == 'dark'" class="scala-list">
+    <q-list link no-border :dark="theme == 'dark'" class="Holoyolo-list">
       <q-item-label header>{{ $t("strings.addresses.myPrimaryAddress") }}</q-item-label>
       <ReceiveItem
         v-for="address in address_list.primary"
@@ -175,7 +175,7 @@ export default {
     font-weight: 400;
   }
 
-  .scala-list-item {
+  .Holoyolo-list-item {
     cursor: pointer;
 
     .q-item-section {

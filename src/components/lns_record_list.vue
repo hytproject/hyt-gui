@@ -1,7 +1,7 @@
 <template>
   <div v-if="records.length > 0" class="lns-record-list">
     <div v-if="needsDecryption" class="decrypt q-pa-md row justify-between items-end">
-      <ScalaField :label="$t('fieldLabels.decryptRecord')" :disable="decrypting" :error="$v.name.$error">
+      <HoloyoloField :label="$t('fieldLabels.decryptRecord')" :disable="decrypting" :error="$v.name.$error">
         <q-input
           v-model.trim="name"
           :dark="theme == 'dark'"
@@ -11,13 +11,13 @@
           :disable="decrypting"
           @blur="$v.name.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
       <div class="btn-wrapper q-ml-md row items-center">
         <q-btn color="primary" :label="$t('buttons.decrypt')" :loading="decrypting" @click="decrypt()" />
       </div>
     </div>
-    <q-list link no-border :dark="theme == 'dark'" class="scala-list">
-      <q-item v-for="record in records" :key="record.name_hash" class="scala-list-item">
+    <q-list link no-border :dark="theme == 'dark'" class="Holoyolo-list">
+      <q-item v-for="record in records" :key="record.name_hash" class="Holoyolo-list-item">
         <q-item-section class="type" avatar>
           <q-icon :name="isLocked(record) ? 'lock' : 'lock_open'" size="24px" />
         </q-item-section>
@@ -92,13 +92,13 @@
 const { clipboard } = require("electron");
 import { mapState } from "vuex";
 import { i18n } from "boot/i18n";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import { lns_name } from "src/validators/common";
 
 export default {
   name: "LNSRecordList",
   components: {
-    ScalaField
+    HoloyoloField
   },
   filters: {
     blockHeight(value) {
@@ -249,7 +249,7 @@ export default {
     cursor: default;
   }
 
-  .scala-field {
+  .Holoyolo-field {
     flex: 1;
   }
 

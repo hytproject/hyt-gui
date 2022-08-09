@@ -22,27 +22,27 @@
     <!-- TODO: Move this to it's own component -->
     <q-dialog ref="aboutModal" minimized>
       <div class="about-modal">
-        <img class="q-mb-md" src="scala.svg" height="42" />
+        <img class="q-mb-md" src="Holoyolo.svg" height="42" />
 
         <p class="q-my-sm">Wallet Version: v{{ version }}</p>
         <p class="q-my-sm">Deaemon Version: v{{ daemonVersion }}</p>
-        <p class="q-my-sm">Copyright (c) 2019-2020, Scala Network</p>
+        <p class="q-my-sm">Copyright (c) 2019-2020, Holoyolo Network</p>
         <p class="q-my-sm">Copyright (c) 2018-2019, Loki Network</p>
         <p class="q-my-sm">Copyright (c) 2018, Ryo Currency Project</p>
         <p class="q-my-sm">All rights reserved.</p>
 
         <div class="q-mt-md q-mb-lg external-links">
           <p>
-            <a href="#" @click="openExternal('https://scalaproject.io/')">https://scalaproject.io/</a>
+            <a href="#" @click="openExternal('https://Holoyoloproject.io/')">https://Holoyoloproject.io/</a>
           </p>
           <p>
-            <a href="#" @click="openExternal('https://t.me/scalaofficial')">Telegram</a>
+            <a href="#" @click="openExternal('https://t.me/Holoyoloofficial')">Telegram</a>
             -
             <a href="#" @click="openExternal('https://discordapp.com/invite/djAFVvy')">Discord</a>
             -
-            <a href="#" @click="openExternal('https://www.reddit.com/r/ScalaNetwork/')">Reddit</a>
+            <a href="#" @click="openExternal('https://www.reddit.com/r/HoloyoloNetwork/')">Reddit</a>
             -
-            <a href="#" @click="openExternal('https://github.com/scala-network/scala-electron-gui')">Github</a>
+            <a href="#" @click="openExternal('https://github.com/Holoyolo-network/Holoyolo-electron-gui')">Github</a>
           </p>
         </div>
         <q-btn color="primary" label="Close" @click="showAbout(false)" />

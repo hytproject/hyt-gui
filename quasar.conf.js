@@ -165,11 +165,11 @@ module.exports = function() {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: "com.scala-project.electron-wallet",
-        productName: "Scala Electron Wallet",
-        copyright: "Copyright © 2018-2019 Scala Project, 2018 Ryo Currency Project",
+        appId: "com.Holoyolo-project.electron-wallet",
+        productName: "Holoyolo Electron Wallet",
+        copyright: "Copyright © 2018-2019 Holoyolo Project, 2018 Ryo Currency Project",
         afterSign: "build/notarize.js",
-        artifactName: "scala-electron-wallet-${version}-${os}.${ext}",
+        artifactName: "Holoyolo-electron-wallet-${version}-${os}.${ext}",
         publish: "github",
 
         linux: {
@@ -192,7 +192,7 @@ module.exports = function() {
         },
 
         dmg: {
-          background: "src-electron/build/scala-dmg.tiff",
+          background: "src-electron/build/Holoyolo-dmg.tiff",
           sign: false
         },
 

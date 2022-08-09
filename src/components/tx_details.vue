@@ -61,7 +61,7 @@
                 <span>{{ $t("strings.transactions.amount") }}</span>
               </div>
               <div class="value">
-                <span><FormatScala :amount="tx.amount" raw-value/></span>
+                <span><FormatHoloyolo :amount="tx.amount" raw-value/></span>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@
                 </span>
               </div>
               <div class="value">
-                <span><FormatScala :amount="tx.fee" raw-value/></span>
+                <span><FormatHoloyolo :amount="tx.fee" raw-value/></span>
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@
                 <q-item-label>
                   <q-item-label header>{{ destination.name }}</q-item-label>
                   <q-item-label class="monospace ellipsis">{{ destination.address }}</q-item-label>
-                  <q-item-label><FormatScala :amount="destination.amount"/></q-item-label>
+                  <q-item-label><FormatHoloyolo :amount="destination.amount"/></q-item-label>
                 </q-item-label>
                 <q-menu context-menu>
                   <q-list separator class="context-menu">
@@ -209,12 +209,12 @@ const { clipboard } = require("electron");
 import { mapState } from "vuex";
 import { date } from "quasar";
 import TxTypeIcon from "components/tx_type_icon";
-import FormatScala from "components/format_scala";
+import FormatHoloyolo from "components/format_Holoyolo";
 export default {
   name: "TxDetails",
   components: {
     TxTypeIcon,
-    FormatScala
+    FormatHoloyolo
   },
   data() {
     return {

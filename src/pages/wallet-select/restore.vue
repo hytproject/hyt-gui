@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div class="q-mx-md">
-      <ScalaField class="q-mt-md" :label="$t('fieldLabels.walletName')" :error="$v.wallet.name.$error">
+      <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.walletName')" :error="$v.wallet.name.$error">
         <q-input
           v-model="wallet.name"
           :placeholder="$t('placeholders.walletName')"
@@ -11,12 +11,12 @@
           @keyup.enter="restore_wallet"
           @blur="$v.wallet.name.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField class="q-mt-md" :label="$t('fieldLabels.mnemonicSeed')" :error="$v.wallet.seed.$error">
+      <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.mnemonicSeed')" :error="$v.wallet.seed.$error">
         <q-input
           v-model="wallet.seed"
-          class="full-width text-area-scala"
+          class="full-width text-area-Holoyolo"
           :placeholder="$t('placeholders.mnemonicSeed')"
           type="textarea"
           :dark="theme == 'dark'"
@@ -24,11 +24,11 @@
           dense
           @blur="$v.wallet.seed.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
 
       <div class="row items-end q-mt-md">
         <div class="col-md-9 col-sm-8">
-          <ScalaField v-if="wallet.refresh_type == 'date'" :label="$t('fieldLabels.restoreFromDate')">
+          <HoloyoloField v-if="wallet.refresh_type == 'date'" :label="$t('fieldLabels.restoreFromDate')">
             <q-input v-model="wallet.refresh_start_date" mask="date" borderless dense>
               <template v-slot:append>
                 <q-icon v-if="wallet.refresh_type == 'date'" name="event" class="cursor-pointer">
@@ -42,8 +42,8 @@
                 </q-icon>
               </template>
             </q-input>
-          </ScalaField>
-          <ScalaField
+          </HoloyoloField>
+          <HoloyoloField
             v-else-if="wallet.refresh_type == 'height'"
             :label="$t('fieldLabels.restoreFromBlockHeight')"
             :error="$v.wallet.refresh_start_height.$error"
@@ -57,7 +57,7 @@
               dense
               @blur="$v.wallet.refresh_start_height.$touch"
             />
-          </ScalaField>
+          </HoloyoloField>
         </div>
         <div class="col-sm-4 col-md-3">
           <template v-if="wallet.refresh_type == 'date'">
@@ -89,7 +89,7 @@
         </div>
       </div>
 
-      <ScalaField class="q-mt-md" :label="$t('fieldLabels.password')">
+      <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.password')">
         <q-input
           v-model="wallet.password"
           :placeholder="$t('placeholders.walletPassword')"
@@ -99,9 +99,9 @@
           dense
           @keyup.enter="restore_wallet"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField class="q-mt-md" :label="$t('fieldLabels.confirmPassword')">
+      <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.confirmPassword')">
         <q-input
           v-model="wallet.password_confirm"
           type="password"
@@ -110,7 +110,7 @@
           dense
           @keyup.enter="restore_wallet"
         />
-      </ScalaField>
+      </HoloyoloField>
       <q-btn class="submit-button" color="primary" :label="$t('buttons.restoreWallet')" @click="restore_wallet" />
     </div>
   </q-page>
@@ -119,7 +119,7 @@
 <script>
 import { required, numeric } from "vuelidate/lib/validators";
 import { mapState } from "vuex";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import { date } from "quasar";
 
 const timeStampFirstBlock = 1525305600000;
@@ -128,7 +128,7 @@ let dateFirstBlock = date.formatDate(timeStampFirstBlock, qDateFormat);
 
 export default {
   components: {
-    ScalaField
+    HoloyoloField
   },
   data() {
     return {

@@ -21,7 +21,7 @@ export default {
     generate: "GENERATE",
     import: "IMPORT",
     importWallet: "IMPORT WALLET | IMPORT WALLETS",
-    lns: "SCALA NAME SERVICE",
+    lns: "Holoyolo NAME SERVICE",
     next: "NEXT",
     openWallet: "OPEN WALLET",
     purchase: "PURCHASE",
@@ -260,7 +260,7 @@ export default {
     copyViewKey: "Copy view key",
     createNewWallet: "Create new wallet",
     deleteWallet: "Delete Wallet",
-    exit: "Exit Scala GUI Wallet",
+    exit: "Exit Holoyolo GUI Wallet",
     importOldGUIWallet: "Import wallets from old GUI",
     manageKeyImages: "Manage Key Images",
     openWallet: "Open wallet",
@@ -361,7 +361,7 @@ export default {
     warnings: {
       noKeyImageExport: "No key images found to export",
       usingLocalNode: "Could not access remote node, switching to local only",
-      usingRemoteNode: "scalad not found, using remote node"
+      usingRemoteNode: "Holoyolod not found, using remote node"
     }
   },
   placeholders: {
@@ -369,7 +369,7 @@ export default {
     addressBookName: "Name that belongs to this address",
     filterTx: "Enter an ID, name, address or amount",
     hexCharacters: "{count} hexadecimal characters",
-    lnsName: "The name to purchase via Scala Name Service",
+    lnsName: "The name to purchase via Holoyolo Name Service",
     lnsBackupOwner: "The wallet address of the backup owner",
     lnsDecryptName: "A LNS name that belongs to you",
     mnemonicSeed: "25 (or 24) word mnemonic seed",
@@ -378,7 +378,7 @@ export default {
     proveOptionalMessage: "Optional message against which the signature is signed",
     recipientWalletAddress: "Recipient's wallet address",
     selectAFile: "Please select a file",
-    sessionId: "The Session ID to link to Scala Name Service",
+    sessionId: "The Session ID to link to Holoyolo Name Service",
     transactionNotes: "Additional notes to locally attach to the transaction",
     walletName: "A name for your wallet",
     walletPassword: "An optional password for the wallet"
@@ -440,9 +440,9 @@ export default {
     lnsDescription:
       "Purchase or update a name for a Session ID. If you purchase a name, it may take a minute or two for it to show up in the list.",
     loadingSettings: "Loading settings",
-    scalaBalance: "Balance",
-    scalaUnlockedBalance: "Unlocked balance",
-    scalaUnlockedShort: "Unlocked",
+    HoloyoloBalance: "Balance",
+    HoloyoloUnlockedBalance: "Unlocked balance",
+    HoloyoloUnlockedShort: "Unlocked",
     me: "Me",
     noTransactionsFound: "No transactions found",
     notes: "Notes",

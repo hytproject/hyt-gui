@@ -30,7 +30,7 @@ exports.default = async function notarizing(context) {
   }
 
   const options = {
-    appBundleId: "com.scala-project.electron-wallet",
+    appBundleId: "com.Holoyolo-project.electron-wallet",
     appPath: `${appOutDir}/${appName}.app`,
     appleId: SIGNING_APPLE_ID,
     appleIdPassword: SIGNING_APP_PASSWORD

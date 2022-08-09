@@ -5,7 +5,7 @@
         {{ $t("titles.transactions") }}
       </div>
 
-      <ScalaField class="col-5 q-px-sm" :label="$t('fieldLabels.filter')">
+      <HoloyoloField class="col-5 q-px-sm" :label="$t('fieldLabels.filter')">
         <q-input
           v-model="tx_filter"
           :dark="theme == 'dark'"
@@ -13,11 +13,11 @@
           borderless
           dense
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField class="col-2" :label="$t('fieldLabels.filterTransactionType')">
+      <HoloyoloField class="col-2" :label="$t('fieldLabels.filterTransactionType')">
         <q-select v-model="tx_type" :dark="theme == 'dark'" :options="tx_type_options" borderless dense />
-      </ScalaField>
+      </HoloyoloField>
     </div>
     <TxList :type="tx_type" :filter="tx_filter" />
   </q-page>
@@ -26,11 +26,11 @@
 <script>
 import { mapState } from "vuex";
 import TxList from "components/tx_list";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 export default {
   components: {
     TxList,
-    ScalaField
+    HoloyoloField
   },
   data() {
     return {

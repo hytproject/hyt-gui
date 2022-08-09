@@ -17,7 +17,7 @@
       </q-header>
       <q-page-container>
         <div class="address-book-modal q-mx-md">
-          <ScalaField :label="$t('fieldLabels.address')" :error="$v.newEntry.address.$error">
+          <HoloyoloField :label="$t('fieldLabels.address')" :error="$v.newEntry.address.$error">
             <q-input
               v-model.trim="newEntry.address"
               :placeholder="address_placeholder"
@@ -33,11 +33,11 @@
               :icon="newEntry.starred ? 'star' : 'star_border'"
               @click="updateStarred"
             />
-          </ScalaField>
-          <ScalaField :label="$t('fieldLabels.name')">
+          </HoloyoloField>
+          <HoloyoloField :label="$t('fieldLabels.name')">
             <q-input v-model.trim="newEntry.name" :dark="theme == 'dark'" borderless dense />
-          </ScalaField>
-          <ScalaField :label="$t('fieldLabels.paymentId')" :error="$v.newEntry.payment_id.$error" optional>
+          </HoloyoloField>
+          <HoloyoloField :label="$t('fieldLabels.paymentId')" :error="$v.newEntry.payment_id.$error" optional>
             <q-input
               v-model.trim="newEntry.payment_id"
               :placeholder="
@@ -50,18 +50,18 @@
               dense
               @blur="$v.newEntry.payment_id.$touch"
             />
-          </ScalaField>
-          <ScalaField :label="$t('fieldLabels.notes')" optional>
+          </HoloyoloField>
+          <HoloyoloField :label="$t('fieldLabels.notes')" optional>
             <q-input
               v-model="newEntry.description"
               :placeholder="$t('placeholders.additionalNotes')"
               type="textarea"
-              class="full-width text-area-scala"
+              class="full-width text-area-Holoyolo"
               :dark="theme == 'dark'"
               borderless
               dense
             />
-          </ScalaField>
+          </HoloyoloField>
 
           <q-btn
             v-if="mode == 'edit'"
@@ -113,7 +113,7 @@
 import { mapState } from "vuex";
 import AddressHeader from "components/address_header";
 import TxList from "components/tx_list";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import { payment_id, address } from "src/validators/common";
 import { required } from "vuelidate/lib/validators";
 export default {
@@ -121,7 +121,7 @@ export default {
   components: {
     AddressHeader,
     TxList,
-    ScalaField
+    HoloyoloField
   },
   data() {
     return {
@@ -245,7 +245,7 @@ export default {
 <style lang="scss">
 .address-book-details {
   .address-book-modal {
-    > .scala-field {
+    > .Holoyolo-field {
       margin-top: 16px;
     }
 

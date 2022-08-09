@@ -1,7 +1,7 @@
 <template>
   <div class="service-node-staking">
     <div class="q-px-md q-pt-md">
-      <ScalaField :label="$t('fieldLabels.serviceNodeKey')" :error="$v.service_node.key.$error">
+      <HoloyoloField :label="$t('fieldLabels.serviceNodeKey')" :error="$v.service_node.key.$error">
         <q-input
           v-model.trim="service_node.key"
           :dark="theme == 'dark'"
@@ -10,9 +10,9 @@
           dense
           @blur="$v.service_node.key.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField :label="$t('fieldLabels.amount')" class="q-mt-md" :error="$v.service_node.amount.$error">
+      <HoloyoloField :label="$t('fieldLabels.amount')" class="q-mt-md" :error="$v.service_node.amount.$error">
         <q-input
           v-model.trim="service_node.amount"
           :dark="theme == 'dark'"
@@ -31,7 +31,7 @@
         >
           {{ $t("buttons.all") }}
         </q-btn>
-      </ScalaField>
+      </HoloyoloField>
       <div class="submit-button">
         <q-btn :disable="!is_able_to_send" color="primary" :label="$t('buttons.stake')" @click="stake()" />
         <q-btn
@@ -56,14 +56,14 @@ const objectAssignDeep = require("object-assign-deep");
 import { mapState } from "vuex";
 import { required, decimal } from "vuelidate/lib/validators";
 import { service_node_key, greater_than_zero } from "src/validators/common";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import WalletPassword from "src/mixins/wallet_password";
 import ServiceNodeUnlock from "components/service_node_unlock";
 
 export default {
   name: "ServiceNodeStaking",
   components: {
-    ScalaField,
+    HoloyoloField,
     ServiceNodeUnlock
   },
   mixins: [WalletPassword],

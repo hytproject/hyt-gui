@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div class="q-mx-md import-wallet">
-      <ScalaField :label="$t('fieldLabels.newWalletName')" :error="$v.wallet.name.$error">
+      <HoloyoloField :label="$t('fieldLabels.newWalletName')" :error="$v.wallet.name.$error">
         <q-input
           v-model="wallet.name"
           :placeholder="$t('placeholders.walletName')"
@@ -11,9 +11,9 @@
           @keyup.enter="import_wallet"
           @blur="$v.wallet.name.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField :label="$t('fieldLabels.walletFile')" disable-hover :error="$v.wallet.path.$error">
+      <HoloyoloField :label="$t('fieldLabels.walletFile')" disable-hover :error="$v.wallet.path.$error">
         <q-input
           v-model="wallet.path"
           :placeholder="$t('placeholders.selectAFile')"
@@ -29,9 +29,9 @@
           :text-color="theme == 'dark' ? 'white' : 'dark'"
           @click="selectFile"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField :label="$t('fieldLabels.password')">
+      <HoloyoloField :label="$t('fieldLabels.password')">
         <q-input
           v-model="wallet.password"
           :placeholder="$t('placeholders.walletPassword')"
@@ -41,9 +41,9 @@
           dense
           @keyup.enter="import_wallet"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField :label="$t('fieldLabels.confirmPassword')">
+      <HoloyoloField :label="$t('fieldLabels.confirmPassword')">
         <q-input
           v-model="wallet.password_confirm"
           type="password"
@@ -52,7 +52,7 @@
           dense
           @keyup.enter="import_wallet"
         />
-      </ScalaField>
+      </HoloyoloField>
       <q-btn class="submit-button" color="primary" :label="$tc('buttons.importWallet', 1)" @click="import_wallet" />
     </div>
   </q-page>
@@ -61,10 +61,10 @@
 <script>
 import { required } from "vuelidate/lib/validators";
 import { mapState } from "vuex";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 export default {
   components: {
-    ScalaField
+    HoloyoloField
   },
   data() {
     return {
@@ -172,7 +172,7 @@ export default {
     }
   }
 
-  .scala-field {
+  .Holoyolo-field {
     margin-top: 16px;
   }
 }

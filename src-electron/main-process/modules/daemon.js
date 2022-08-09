@@ -28,24 +28,24 @@ export class Daemon {
   checkVersion() {
     return new Promise(resolve => {
       if (process.platform === "win32") {
-        let scalad_path = path.join(__ryo_bin, "scalad.exe");
-        let scalad_version_cmd = `"${scalad_path}" --version`;
-        if (!fs.existsSync(scalad_path)) {
+        let Holoyolod_path = path.join(__ryo_bin, "Holoyolod.exe");
+        let Holoyolod_version_cmd = `"${Holoyolod_path}" --version`;
+        if (!fs.existsSync(Holoyolod_path)) {
           resolve(false);
         }
-        child_process.exec(scalad_version_cmd, (error, stdout) => {
+        child_process.exec(Holoyolod_version_cmd, (error, stdout) => {
           if (error) {
             resolve(false);
           }
           resolve(stdout);
         });
       } else {
-        let scalad_path = path.join(__ryo_bin, "scalad");
-        let scalad_version_cmd = `"${scalad_path}" --version`;
-        if (!fs.existsSync(scalad_path)) {
+        let Holoyolod_path = path.join(__ryo_bin, "Holoyolod");
+        let Holoyolod_version_cmd = `"${Holoyolod_path}" --version`;
+        if (!fs.existsSync(Holoyolod_path)) {
           resolve(false);
         }
-        child_process.exec(scalad_version_cmd, { detached: true }, (error, stdout) => {
+        child_process.exec(Holoyolod_version_cmd, { detached: true }, (error, stdout) => {
           if (error) {
             resolve(false);
           }
@@ -145,7 +145,7 @@ export class Daemon {
         args.push("--stagenet");
       }
 
-      args.push("--log-file", path.join(dirs[net_type], "logs", "scalad.log"));
+      args.push("--log-file", path.join(dirs[net_type], "logs", "Holoyolod.log"));
       if (daemon.rpc_bind_ip !== "127.0.0.1") {
         args.push("--confirm-external-bind");
       }
@@ -166,9 +166,9 @@ export class Daemon {
         .then(status => {
           if (status === "closed") {
             if (process.platform === "win32") {
-              this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "scalad.exe"), args);
+              this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "Holoyolod.exe"), args);
             } else {
-              this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "scalad"), args, {
+              this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "Holoyolod"), args, {
                 detached: true
               });
             }
@@ -477,7 +477,7 @@ export class Daemon {
     return (records || []).map(record => {
       // Record type is in uint16 format
       // Session = 0
-      // For now since wallet and scala names haven't been implemented, we always assume it's session
+      // For now since wallet and Holoyolo names haven't been implemented, we always assume it's session
       const type = "session";
       return {
         ...record,

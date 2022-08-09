@@ -3,7 +3,7 @@
     <q-stepper ref="stepper" v-model="step" class="welcome-stepper" flat dark>
       <q-step :name="1" :title="$t('titles.welcome')" :done="step > 1" class="first-step">
         <div class="welcome-container">
-          <img src="scala.svg" height="100" class="q-mb-md" />
+          <img src="Holoyolo.svg" height="100" class="q-mb-md" />
           <div>Wallet Version: v{{ version }}</div>
           <div>Daemon Version: {{ daemonVersion }}</div>
           <LanguageSelect class="q-mt-lg" @select="onLanguageSelected" />
@@ -95,7 +95,7 @@ export default {
 
   .welcome-stepper {
     height: 100%;
-    // the Scala lighter grey is behind it
+    // the Holoyolo lighter grey is behind it
     background: transparent;
   }
 

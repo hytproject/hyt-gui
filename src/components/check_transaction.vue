@@ -3,7 +3,7 @@
     <div class="q-pa-md">
       <div class="q-mb-lg description">{{ $t("strings.checkTransaction.description") }}</div>
       <div>
-        <ScalaField :label="$t('fieldLabels.transactionId')" :error="$v.txid.$error">
+        <HoloyoloField :label="$t('fieldLabels.transactionId')" :error="$v.txid.$error">
           <q-input
             v-model.trim="txid"
             :dark="theme == 'dark'"
@@ -12,8 +12,8 @@
             dense
             @blur="$v.txid.$touch"
           />
-        </ScalaField>
-        <ScalaField class="q-mt-md" :label="$t('fieldLabels.address')" :error="$v.address.$error" optional>
+        </HoloyoloField>
+        <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.address')" :error="$v.address.$error" optional>
           <q-input
             v-model.trim="address"
             :dark="theme == 'dark'"
@@ -22,8 +22,8 @@
             dense
             @blur="$v.address.$touch"
           />
-        </ScalaField>
-        <ScalaField class="q-mt-md" :label="$t('fieldLabels.message')" optional>
+        </HoloyoloField>
+        <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.message')" optional>
           <q-input
             v-model.trim="message"
             :dark="theme == 'dark'"
@@ -31,8 +31,8 @@
             borderless
             dense
           />
-        </ScalaField>
-        <ScalaField class="q-mt-md" :label="$t('fieldLabels.signature')" :error="$v.signature.$error">
+        </HoloyoloField>
+        <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.signature')" :error="$v.signature.$error">
           <q-input
             v-model.trim="signature"
             :dark="theme == 'dark'"
@@ -40,7 +40,7 @@
             borderless
             dense
           />
-        </ScalaField>
+        </HoloyoloField>
         <div class="submit-button">
           <q-btn color="primary" :label="$t('buttons.check')" @click="check" />
           <q-btn v-if="canClear" color="secondary" :label="$t('buttons.clear')" @click="clear" />
@@ -58,7 +58,7 @@
         <div v-if="status.state.received != null" class="q-mb-sm">
           <div class="title">{{ $t("strings.checkTransaction.infoTitles.received") }}</div>
           <div>
-            <FormatScala :amount="status.state.received" raw-value />
+            <FormatHoloyolo :amount="status.state.received" raw-value />
           </div>
         </div>
         <div v-if="status.state.in_pool != null" class="q-mb-sm">
@@ -79,14 +79,14 @@ import { mapState } from "vuex";
 import { required } from "vuelidate/lib/validators";
 import { address } from "src/validators/common";
 import { i18n } from "boot/i18n";
-import ScalaField from "components/scala_field";
-import FormatScala from "components/format_scala";
+import HoloyoloField from "components/Holoyolo_field";
+import FormatHoloyolo from "components/format_Holoyolo";
 
 export default {
   name: "CheckTransaction",
   components: {
-    ScalaField,
-    FormatScala
+    HoloyoloField,
+    FormatHoloyolo
   },
   data() {
     return {

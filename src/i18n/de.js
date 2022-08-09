@@ -239,7 +239,7 @@ export default {
     copyViewKey: "View Key kopieren",
     createNewWallet: "Neue Wallet erstellen",
     deleteWallet: "Wallet löschen",
-    exit: "Scala GUI Wallet schliessen",
+    exit: "Holoyolo GUI Wallet schliessen",
     importOldGUIWallet: "Wallets von alter GUI importieren",
     manageKeyImages: "Key Images verwalten",
     openWallet: "Wallet öffnen",
@@ -324,7 +324,7 @@ export default {
     warnings: {
       noKeyImageExport: "Keine Key Images zum Exportieren gefunden",
       usingLocalNode: "Zugang zur Remote Node nicht möglich, wechsle zur lokalen Node",
-      usingRemoteNode: "lscalad nicht gefunden, benutze eine Remote Node"
+      usingRemoteNode: "lHoloyolod nicht gefunden, benutze eine Remote Node"
     }
   },
   placeholders: {
@@ -397,9 +397,9 @@ export default {
     destinationUnknown: "Ziel unbekannt",
     editAddressBookEntry: "Adressbucheintrag bearbeiten",
     loadingSettings: "Einstellungen werden geladen",
-    scalaBalance: "Guthaben",
-    scalaUnlockedBalance: "frei verfügbares Guthaben",
-    scalaUnlockedShort: "frei verfügbar",
+    HoloyoloBalance: "Guthaben",
+    HoloyoloUnlockedBalance: "frei verfügbares Guthaben",
+    HoloyoloUnlockedShort: "frei verfügbar",
     noTransactionsFound: "Keine Transaktionen gefunden",
     notes: "Notizen",
     numberOfUnspentOutputs: "Anzahl der unspent outputs",

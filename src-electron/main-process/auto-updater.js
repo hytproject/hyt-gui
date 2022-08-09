@@ -96,8 +96,8 @@ async function showUpdateDialog(mainWindow) {
   const options = {
     type: "info",
     buttons: ["Restart Wallet", "Later"],
-    title: "Scala Electron Wallet update available",
-    message: "There is a new version of Scala Electron Wallet available.",
+    title: "Holoyolo Electron Wallet update available",
+    message: "There is a new version of Holoyolo Electron Wallet available.",
     detail: "Press Restart Wallet to apply the update",
     defaultId: LATER_BUTTON,
     cancelId: RESTART_BUTTON
@@ -115,7 +115,7 @@ async function showCannotUpdateDialog(mainWindow) {
     buttons: ["Ok"],
     title: "Cannot update",
     message:
-      "Scala Electron Wallet failed to update but there is a new version available. Please go to https://scala.network/ and install the new version manually."
+      "Holoyolo Electron Wallet failed to update but there is a new version available. Please go to https://Holoyolo.network/ and install the new version manually."
   };
 
   return new Promise(resolve => {

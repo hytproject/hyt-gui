@@ -4,7 +4,7 @@
       <MainMenu />
       <q-toolbar-title>
         <div class="flex items-center justify-center" style="margin-top:7px">
-          <img src="scala.svg" height="32" />
+          <img src="Holoyolo.svg" height="32" />
         </div>
       </q-toolbar-title>
     </q-header>

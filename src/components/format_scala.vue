@@ -1,10 +1,10 @@
 <template>
-  <span> {{ value }} SCALA </span>
+  <span> {{ value }} Holoyolo </span>
 </template>
 
 <script>
 export default {
-  name: "FormatScala",
+  name: "FormatHoloyolo",
   props: {
     amount: {
       type: Number,

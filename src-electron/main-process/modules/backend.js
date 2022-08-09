@@ -25,11 +25,11 @@ export class Backend {
 
   init(config) {
     if (os.platform() === "win32") {
-      this.config_dir = "C:\\ProgramData\\scala";
-      this.wallet_dir = `${os.homedir()}\\Documents\\Scala`;
+      this.config_dir = "C:\\ProgramData\\Holoyolo";
+      this.wallet_dir = `${os.homedir()}\\Documents\\Holoyolo`;
     } else {
-      this.config_dir = path.join(os.homedir(), ".scala");
-      this.wallet_dir = path.join(os.homedir(), "Scala");
+      this.config_dir = path.join(os.homedir(), ".Holoyolo");
+      this.wallet_dir = path.join(os.homedir(), "Holoyolo");
     }
 
     if (!fs.existsSync(this.config_dir)) {
@@ -60,7 +60,7 @@ export class Backend {
     const daemons = {
       mainnet: {
         ...daemon,
-        remote_host: "scalanode.com",
+        remote_host: "Holoyolonode.com",
         remote_port: 11812
       },
       stagenet: {
@@ -104,7 +104,7 @@ export class Backend {
 
     this.remotes = [
       {
-        host: "scalanode.com",
+        host: "Holoyolonode.com",
         port: "11812"
       },
       {
@@ -112,7 +112,7 @@ export class Backend {
         port: "11812"
       },
       {
-        host: "mine.scalaproject.io",
+        host: "mine.Holoyoloproject.io",
         port: "8000"
       }
     ];
@@ -248,7 +248,7 @@ export class Backend {
         }
 
         if (path) {
-          const baseUrl = net_type === "testnet" ? "" : "https://explorer.scalaproject.io";
+          const baseUrl = net_type === "testnet" ? "" : "https://explorer.Holoyoloproject.io";
           const url = `${baseUrl}/${path}`;
           require("electron").shell.openExternal(url + params.id);
         }

@@ -241,7 +241,7 @@ export default {
     copyViewKey: "Copier la clé de visibilité",
     createNewWallet: "Créer un nouveau portefeuille",
     deleteWallet: "Supprimer le portefeuille",
-    exit: "Quitter le portefeuille Scala GUI",
+    exit: "Quitter le portefeuille Holoyolo GUI",
     importOldGUIWallet: "Importer le portefeuille depuis l’ancien GUI",
     manageKeyImages: "Gérer les images clés",
     openWallet: "Ouvrir le portefeuille",
@@ -326,7 +326,7 @@ export default {
     warnings: {
       noKeyImageExport: "Aucune clé image n'a été trouvé pour l'export",
       usingLocalNode: "Impossible d'accéder au nœud distant, basculement en local uniquement",
-      usingRemoteNode: "scalad introuvable, utilisation du nœud distant"
+      usingRemoteNode: "Holoyolod introuvable, utilisation du nœud distant"
     }
   },
   placeholders: {
@@ -400,9 +400,9 @@ export default {
     destinationUnknown: "Destination inconnue",
     editAddressBookEntry: "Modifiez l'entrée du carnet d'adresses",
     loadingSettings: "Chargement des réglages",
-    scalaBalance: "Solde",
-    scalaUnlockedBalance: "Solde débloqué",
-    scalaUnlockedShort: "Débloqué",
+    HoloyoloBalance: "Solde",
+    HoloyoloUnlockedBalance: "Solde débloqué",
+    HoloyoloUnlockedShort: "Débloqué",
     noTransactionsFound: "Aucune transaction trouvée",
     notes: "Notes",
     numberOfUnspentOutputs: "Nombre de sorties non dépensées",

@@ -2,7 +2,7 @@
   <q-page>
     <div class="init-screen-page text-center">
       <div class="absolute-center">
-        <img src="scala.svg" width="400" class="q-mb-md" />
+        <img src="Holoyolo.svg" width="400" class="q-mb-md" />
 
         <div class="startup-icons q-mt-xl q-mb-lg">
           <div ref="backend">

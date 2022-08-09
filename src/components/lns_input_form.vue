@@ -2,7 +2,7 @@
   <div class="lns-input-form">
     <!-- Name -->
     <div class="col q-mt-sm">
-      <ScalaField :label="$t('fieldLabels.name')" :disable="disableName" :error="$v.record.name.$error">
+      <HoloyoloField :label="$t('fieldLabels.name')" :disable="disableName" :error="$v.record.name.$error">
         <q-input
           v-model.trim="record.name"
           :dark="theme == 'dark'"
@@ -12,12 +12,12 @@
           dense
           @blur="$v.record.name.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
     </div>
 
-    <!-- Value (Session ID, Wallet Address or .scala address) -->
+    <!-- Value (Session ID, Wallet Address or .Holoyolo address) -->
     <div class="col q-mt-sm">
-      <ScalaField class="q-mt-md" :label="value_field_label" :error="$v.record.value.$error">
+      <HoloyoloField class="q-mt-md" :label="value_field_label" :error="$v.record.value.$error">
         <q-input
           v-model.trim="record.value"
           :dark="theme == 'dark'"
@@ -26,12 +26,12 @@
           dense
           @blur="$v.record.value.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
     </div>
 
     <!-- Owner -->
     <div class="col q-mt-sm">
-      <ScalaField class="q-mt-md" :label="$t('fieldLabels.owner')" :error="$v.record.owner.$error" optional>
+      <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.owner')" :error="$v.record.owner.$error" optional>
         <q-input
           v-model.trim="record.owner"
           :dark="theme == 'dark'"
@@ -40,12 +40,12 @@
           dense
           @blur="$v.record.owner.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
     </div>
 
     <!-- Backup owner -->
     <div class="col q-mt-sm">
-      <ScalaField class="q-mt-md" :label="$t('fieldLabels.backupOwner')" :error="$v.record.backup_owner.$error" optional>
+      <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.backupOwner')" :error="$v.record.backup_owner.$error" optional>
         <q-input
           v-model.trim="record.backup_owner"
           :dark="theme == 'dark'"
@@ -54,7 +54,7 @@
           dense
           @blur="$v.record.backup_owner.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
     </div>
     <div class="buttons">
       <q-btn
@@ -72,13 +72,13 @@
 import { mapState } from "vuex";
 import { required, maxLength } from "vuelidate/lib/validators";
 import { address, session_id, lns_name } from "src/validators/common";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import WalletPassword from "src/mixins/wallet_password";
 
 export default {
   name: "LNSInputForm",
   components: {
-    ScalaField
+    HoloyoloField
   },
   mixins: [WalletPassword],
   props: {

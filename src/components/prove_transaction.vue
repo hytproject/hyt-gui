@@ -5,7 +5,7 @@
         {{ $t("strings.proveTransactionDescription") }}
       </div>
       <div>
-        <ScalaField :label="$t('fieldLabels.transactionId')" :error="$v.txid.$error">
+        <HoloyoloField :label="$t('fieldLabels.transactionId')" :error="$v.txid.$error">
           <q-input
             v-model.trim="txid"
             :dark="theme == 'dark'"
@@ -14,8 +14,8 @@
             dense
             @blur="$v.txid.$touch"
           />
-        </ScalaField>
-        <ScalaField class="q-mt-md" :label="$t('fieldLabels.address')" :error="$v.address.$error" optional>
+        </HoloyoloField>
+        <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.address')" :error="$v.address.$error" optional>
           <q-input
             v-model.trim="address"
             :dark="theme == 'dark'"
@@ -24,8 +24,8 @@
             dense
             @blur="$v.address.$touch"
           />
-        </ScalaField>
-        <ScalaField class="q-mt-md" :label="$t('fieldLabels.message')" optional>
+        </HoloyoloField>
+        <HoloyoloField class="q-mt-md" :label="$t('fieldLabels.message')" optional>
           <q-input
             v-model.trim="message"
             :dark="theme == 'dark'"
@@ -33,7 +33,7 @@
             borderless
             dense
           />
-        </ScalaField>
+        </HoloyoloField>
         <div class="buttons submit-button">
           <q-btn color="primary" :label="$t('buttons.generate')" @click="generate" />
           <q-btn v-if="canClear" color="secondary" :label="$t('buttons.clear')" @click="clear" />
@@ -57,13 +57,13 @@
 import { mapState } from "vuex";
 import { required } from "vuelidate/lib/validators";
 import { address } from "src/validators/common";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import { clipboard } from "electron";
 
 export default {
   name: "ProveTransaction",
   components: {
-    ScalaField
+    HoloyoloField
   },
   data() {
     return {

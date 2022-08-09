@@ -1,7 +1,7 @@
 <template>
   <q-page class="create-wallet">
     <div class="fields q-mx-md q-mt-md">
-      <ScalaField :label="$t('fieldLabels.walletName')" :error="$v.wallet.name.$error">
+      <HoloyoloField :label="$t('fieldLabels.walletName')" :error="$v.wallet.name.$error">
         <q-input
           v-model="wallet.name"
           :dark="theme == 'dark'"
@@ -11,13 +11,13 @@
           @keyup.enter="create"
           @blur="$v.wallet.name.$touch"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField :label="$t('fieldLabels.seedLanguage')">
+      <HoloyoloField :label="$t('fieldLabels.seedLanguage')">
         <q-select v-model="wallet.language" :options="languageOptions" :dark="theme == 'dark'" borderless dense />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField :label="$t('fieldLabels.password')" optional>
+      <HoloyoloField :label="$t('fieldLabels.password')" optional>
         <q-input
           v-model="wallet.password"
           type="password"
@@ -27,9 +27,9 @@
           dense
           @keyup.enter="create"
         />
-      </ScalaField>
+      </HoloyoloField>
 
-      <ScalaField :label="$t('fieldLabels.confirmPassword')">
+      <HoloyoloField :label="$t('fieldLabels.confirmPassword')">
         <q-input
           v-model="wallet.password_confirm"
           type="password"
@@ -38,7 +38,7 @@
           dense
           @keyup.enter="create"
         />
-      </ScalaField>
+      </HoloyoloField>
 
       <q-btn class="submit-button" color="primary" :label="$t('buttons.createWallet')" @click="create" />
     </div>
@@ -48,10 +48,10 @@
 <script>
 import { required } from "vuelidate/lib/validators";
 import { mapState } from "vuex";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 export default {
   components: {
-    ScalaField
+    HoloyoloField
   },
   data() {
     return {

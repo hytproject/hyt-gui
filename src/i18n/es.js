@@ -239,7 +239,7 @@ export default {
     copyViewKey: "Copiar clave de visualización",
     createNewWallet: "Crear nuevo monedero",
     deleteWallet: "Eliminar monedero",
-    exit: "Cerrar la interfaz del monedero Scala",
+    exit: "Cerrar la interfaz del monedero Holoyolo",
     importOldGUIWallet: "Importar monedero de una interfaz gráfica antigua",
     manageKeyImages: "Administrar Imágenes de Clave",
     openWallet: "Abrir monedero",
@@ -324,7 +324,7 @@ export default {
     warnings: {
       noKeyImageExport: "No se han encontrado claves para exportar",
       usingLocalNode: "No se ha podido acceder al nodo remoto, volviendo al modo local",
-      usingRemoteNode: "scalad no encontrado, utilizando nodo remoto"
+      usingRemoteNode: "Holoyolod no encontrado, utilizando nodo remoto"
     }
   },
   placeholders: {
@@ -396,9 +396,9 @@ export default {
     destinationUnknown: "Destino Desconocido",
     editAddressBookEntry: "Modificar un registro de la libreta de direcciones",
     loadingSettings: "Cargando configuración",
-    scalaBalance: "Saldo",
-    scalaUnlockedBalance: "Saldo libre",
-    scalaUnlockedShort: "Libre",
+    HoloyoloBalance: "Saldo",
+    HoloyoloUnlockedBalance: "Saldo libre",
+    HoloyoloUnlockedShort: "Libre",
     noTransactionsFound: "No se han encontrado transacciones",
     notes: "Notas",
     numberOfUnspentOutputs: "Número de salidas no gastadas",
@@ -422,7 +422,7 @@ export default {
     seedWords: "Palabras semilla",
     selectLanguage: "Escoja un idioma",
     serviceNodeRegistrationDescription:
-      'Introduzca la orden {registerCommand} generada por el servicio (scalad) que se está intentado registrar como Nodo de Servicio usando la instrucción "{prepareCommand}"',
+      'Introduzca la orden {registerCommand} generada por el servicio (Holoyolod) que se está intentado registrar como Nodo de Servicio usando la instrucción "{prepareCommand}"',
     spendKey: "Clave de gasto",
     startingDaemon: "Iniciando servicio",
     startingWallet: "Iniciando monedero",

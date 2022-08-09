@@ -5,11 +5,11 @@
     </div>
 
     <template v-if="address_book_combined.length">
-      <q-list link no-border :dark="theme == 'dark'" class="scala-list">
+      <q-list link no-border :dark="theme == 'dark'" class="Holoyolo-list">
         <q-item
           v-for="entry in address_book_combined"
           :key="`${entry.address}-${entry.name}-${entry.payment_id}`"
-          class="scala-list-item"
+          class="Holoyolo-list-item"
           @click.native="details(entry)"
         >
           <q-item-section>
@@ -161,7 +161,7 @@ export default {
     font-weight: 500;
   }
 
-  .scala-list-item {
+  .Holoyolo-list-item {
     cursor: pointer;
     padding-top: 12px;
     padding-bottom: 12px;

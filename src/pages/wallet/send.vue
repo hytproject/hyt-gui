@@ -10,7 +10,7 @@
         <div class="row gutter-md">
           <!-- Amount -->
           <div class="col-6 amount">
-            <ScalaField :label="$t('fieldLabels.amount')" :error="$v.newTx.amount.$error">
+            <HoloyoloField :label="$t('fieldLabels.amount')" :error="$v.newTx.amount.$error">
               <q-input
                 v-model="newTx.amount"
                 :dark="theme == 'dark'"
@@ -29,12 +29,12 @@
               >
                 {{ $t("buttons.all") }}
               </q-btn>
-            </ScalaField>
+            </HoloyoloField>
           </div>
 
           <!-- Priority -->
           <div class="col-6 priority">
-            <ScalaField :label="$t('fieldLabels.priority')">
+            <HoloyoloField :label="$t('fieldLabels.priority')">
               <q-select
                 v-model="newTx.priority"
                 emit-value
@@ -44,13 +44,13 @@
                 borderless
                 dense
               />
-            </ScalaField>
+            </HoloyoloField>
           </div>
         </div>
 
         <!-- Address -->
         <div class="col q-mt-sm">
-          <ScalaField :label="$t('fieldLabels.address')" :error="$v.newTx.address.$error">
+          <HoloyoloField :label="$t('fieldLabels.address')" :error="$v.newTx.address.$error">
             <q-input
               v-model.trim="newTx.address"
               :dark="theme == 'dark'"
@@ -62,12 +62,12 @@
             <q-btn color="secondary" :text-color="theme == 'dark' ? 'white' : 'dark'" to="addressbook">
               {{ $t("buttons.contacts") }}
             </q-btn>
-          </ScalaField>
+          </HoloyoloField>
         </div>
 
         <!-- Payment ID -->
         <div class="col q-mt-sm">
-          <ScalaField :label="$t('fieldLabels.paymentId')" :error="$v.newTx.payment_id.$error" optional>
+          <HoloyoloField :label="$t('fieldLabels.paymentId')" :error="$v.newTx.payment_id.$error" optional>
             <q-input
               v-model.trim="newTx.payment_id"
               :dark="theme == 'dark'"
@@ -80,22 +80,22 @@
               dense
               @blur="$v.newTx.payment_id.$touch"
             />
-          </ScalaField>
+          </HoloyoloField>
         </div>
 
         <!-- Notes -->
         <div class="col q-mt-sm">
-          <ScalaField :label="$t('fieldLabels.notes')" optional>
+          <HoloyoloField :label="$t('fieldLabels.notes')" optional>
             <q-input
               v-model="newTx.note"
-              class="full-width text-area-scala"
+              class="full-width text-area-Holoyolo"
               type="textarea"
               :dark="theme == 'dark'"
               :placeholder="$t('placeholders.transactionNotes')"
               borderless
               dense
             />
-          </ScalaField>
+          </HoloyoloField>
         </div>
 
         <q-checkbox
@@ -105,7 +105,7 @@
           color="dark"
         />
         <div v-if="newTx.address_book.save">
-          <ScalaField :label="$t('fieldLabels.name')" optional>
+          <HoloyoloField :label="$t('fieldLabels.name')" optional>
             <q-input
               v-model="newTx.address_book.name"
               :dark="theme == 'dark'"
@@ -113,19 +113,19 @@
               borderless
               dense
             />
-          </ScalaField>
-          <ScalaField class="q-mt-sm" :label="$t('fieldLabels.notes')" optional>
+          </HoloyoloField>
+          <HoloyoloField class="q-mt-sm" :label="$t('fieldLabels.notes')" optional>
             <q-input
               v-model="newTx.address_book.description"
               type="textarea"
-              class="full-width text-area-scala"
+              class="full-width text-area-Holoyolo"
               rows="2"
               :dark="theme == 'dark'"
               :placeholder="$t('placeholders.additionalNotes')"
               borderless
               dense
             />
-          </ScalaField>
+          </HoloyoloField>
         </div>
         <!-- div required so button below checkbox -->
         <div>
@@ -150,13 +150,13 @@
 import { mapState } from "vuex";
 import { required, decimal } from "vuelidate/lib/validators";
 import { payment_id, address, greater_than_zero } from "src/validators/common";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import WalletPassword from "src/mixins/wallet_password";
 const objectAssignDeep = require("object-assign-deep");
 
 export default {
   components: {
-    ScalaField
+    HoloyoloField
   },
   mixins: [WalletPassword],
   data() {

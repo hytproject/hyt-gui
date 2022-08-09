@@ -1,6 +1,6 @@
 <template>
   <div class="column wallet-info">
-    <div class="row justify-between items-center wallet-header scala-green">
+    <div class="row justify-between items-center wallet-header Holoyolo-green">
       <div class="title">{{ info.name }}</div>
       <WalletSettings />
     </div>
@@ -9,14 +9,14 @@
         <div class="funds column items-center">
           <div class="balance">
             <div class="text">
-              <span>{{ $t("strings.scalaBalance") }}</span>
+              <span>{{ $t("strings.HoloyoloBalance") }}</span>
             </div>
             <div class="value">
-              <span><FormatScala :amount="info.balance"/></span>
+              <span><FormatHoloyolo :amount="info.balance"/></span>
             </div>
           </div>
           <div class="row unlocked">
-            <span>{{ $t("strings.scalaUnlockedShort") }}: <FormatScala :amount="info.unlocked_balance"/></span>
+            <span>{{ $t("strings.HoloyoloUnlockedShort") }}: <FormatHoloyolo :amount="info.unlocked_balance"/></span>
           </div>
         </div>
       </div>
@@ -30,13 +30,13 @@
 
 <script>
 import { mapState } from "vuex";
-import FormatScala from "components/format_scala";
+import FormatHoloyolo from "components/format_Holoyolo";
 import WalletSettings from "components/wallet_settings";
 import CopyIcon from "components/icons/copy_icon";
 export default {
   name: "WalletDetails",
   components: {
-    FormatScala,
+    FormatHoloyolo,
     WalletSettings,
     CopyIcon
   },

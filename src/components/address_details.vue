@@ -26,10 +26,10 @@
                 <div class="infoBox">
                   <div class="infoBoxContent">
                     <div class="text">
-                      <span>{{ $t("strings.scalaBalance") }}</span>
+                      <span>{{ $t("strings.HoloyoloBalance") }}</span>
                     </div>
                     <div class="value">
-                      <span><FormatScala :amount="address.balance"/></span>
+                      <span><FormatHoloyolo :amount="address.balance"/></span>
                     </div>
                   </div>
                 </div>
@@ -37,10 +37,10 @@
                 <div class="infoBox">
                   <div class="infoBoxContent">
                     <div class="text">
-                      <span>{{ $t("strings.scalaUnlockedBalance") }}</span>
+                      <span>{{ $t("strings.HoloyoloUnlockedBalance") }}</span>
                     </div>
                     <div class="value">
-                      <span><FormatScala :amount="address.unlocked_balance"/></span>
+                      <span><FormatHoloyolo :amount="address.unlocked_balance"/></span>
                     </div>
                   </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="infoBox">
                   <div class="infoBoxContent">
                     <div class="text">
-                      <span>{{ $t("strings.scalaBalance") }}</span>
+                      <span>{{ $t("strings.HoloyoloBalance") }}</span>
                     </div>
                     <div class="value"><span>N/A</span></div>
                   </div>
@@ -71,7 +71,7 @@
                 <div class="infoBox">
                   <div class="infoBoxContent">
                     <div class="text">
-                      <span>{{ $t("strings.scalaUnlockedBalance") }}</span>
+                      <span>{{ $t("strings.HoloyoloUnlockedBalance") }}</span>
                     </div>
                     <div class="value"><span>N/A</span></div>
                   </div>
@@ -136,7 +136,7 @@
 import { mapState } from "vuex";
 const { clipboard, nativeImage } = require("electron");
 import AddressHeader from "components/address_header";
-import FormatScala from "components/format_scala";
+import FormatHoloyolo from "components/format_Holoyolo";
 import QrcodeVue from "qrcode.vue";
 import TxList from "components/tx_list";
 export default {
@@ -144,7 +144,7 @@ export default {
   components: {
     AddressHeader,
     TxList,
-    FormatScala,
+    FormatHoloyolo,
     QrcodeVue
   },
   data() {

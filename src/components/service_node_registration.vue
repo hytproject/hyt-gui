@@ -5,7 +5,7 @@
         <b place="registerCommand">register_service_node</b>
         <b place="prepareCommand">prepare_registration</b>
       </i18n>
-      <ScalaField
+      <HoloyoloField
         :label="$t('fieldLabels.serviceNodeCommand')"
         :error="$v.registration_string.$error"
         :disabled="registration_status.sending"
@@ -14,7 +14,7 @@
           v-model.trim="registration_string"
           type="textarea"
           :dark="theme == 'dark'"
-          class="full-width text-area-scala"
+          class="full-width text-area-Holoyolo"
           placeholder="register_service_node ..."
           :disabled="registration_status.sending"
           borderless
@@ -22,7 +22,7 @@
           @blur="$v.registration_string.$touch"
           @paste="onPaste"
         />
-      </ScalaField>
+      </HoloyoloField>
       <q-btn
         class="register-button"
         color="primary"
@@ -41,13 +41,13 @@
 <script>
 import { mapState } from "vuex";
 import { required } from "vuelidate/lib/validators";
-import ScalaField from "components/scala_field";
+import HoloyoloField from "components/Holoyolo_field";
 import WalletPassword from "src/mixins/wallet_password";
 
 export default {
   name: "ServiceNodeRegistration",
   components: {
-    ScalaField
+    HoloyoloField
   },
   mixins: [WalletPassword],
   data() {

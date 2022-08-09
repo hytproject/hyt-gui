@@ -4,7 +4,7 @@ const path = require("path");
 
 async function download() {
   const { platform, env } = process;
-  const repoUrl = "https://api.github.com/repos/scala-project/scala/releases/latest";
+  const repoUrl = "https://api.github.com/repos/Holoyolo-project/Holoyolo/releases/latest";
   try {
     const pwd = process.cwd();
     const downloadDir = path.join(pwd, "downloads");
@@ -12,7 +12,7 @@ async function download() {
 
     const headers = {
       "Content-Type": "application/json",
-      "User-Agent": "Scala-Electron-Wallet"
+      "User-Agent": "Holoyolo-Electron-Wallet"
     };
     if (env.GH_TOKEN) {
       headers.Authorisation = `Bearer ${env.GH_TOKEN}`;

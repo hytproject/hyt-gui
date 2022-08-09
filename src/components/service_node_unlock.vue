@@ -10,7 +10,7 @@
             <q-item-label class="ellipsis">{{ node.service_node_pubkey }}</q-item-label>
             <q-item-label class="non-selectable"
               >{{ getRole(node) }} • {{ getFee(node) }} • {{ $t("strings.contribution") }}:
-              <FormatScala :amount="node.ourContributionAmount"
+              <FormatHoloyolo :amount="node.ourContributionAmount"
             /></q-item-label>
           </q-item-section>
           <q-item-section side>
@@ -63,13 +63,13 @@ import { mapState } from "vuex";
 import { required } from "vuelidate/lib/validators";
 import { service_node_key } from "src/validators/common";
 import WalletPassword from "src/mixins/wallet_password";
-import FormatScala from "components/format_scala";
+import FormatHoloyolo from "components/format_Holoyolo";
 import ServiceNodeDetails from "components/service_node_details";
 
 export default {
   name: "ServiceNodeUnlock",
   components: {
-    FormatScala,
+    FormatHoloyolo,
     ServiceNodeDetails
   },
   mixins: [WalletPassword],

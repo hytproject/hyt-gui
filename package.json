@@ -1,16 +1,16 @@
 {
-  "name": "scala-electron-wallet",
+  "name": "Holoyolo-electron-wallet",
   "version": "4.1.0",
-  "description": "Modern GUI interface for Scala Currency",
-  "productName": "Scala Electron Wallet",
+  "description": "Modern GUI interface for Holoyolo Currency",
+  "productName": "Holoyolo Electron Wallet",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scala-project/scala-electron-gui-wallet.git"
+    "url": "https://github.com/Holoyolo-project/Holoyolo-electron-gui-wallet.git"
   },
-  "cordovaId": "com.scalanetwork.wallet",
+  "cordovaId": "com.Holoyolonetwork.wallet",
   "author": {
-    "name": "Scala",
-    "email": "hello@scalaproject.io"
+    "name": "Holoyolo",
+    "email": "hello@Holoyoloproject.io"
   },
   "private": true,
   "scripts": {

@@ -32,7 +32,7 @@
                   <span>{{ $t("strings.serviceNodeDetails.stakingRequirement") }}</span>
                 </div>
                 <div class="value">
-                  <span><FormatScala :amount="node.staking_requirement" raw-value/></span>
+                  <span><FormatHoloyolo :amount="node.staking_requirement" raw-value/></span>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@
                   <span>{{ $t("strings.serviceNodeDetails.totalContributed") }}</span>
                 </div>
                 <div class="value">
-                  <span><FormatScala :amount="node.total_contributed" raw-value/></span>
+                  <span><FormatHoloyolo :amount="node.total_contributed" raw-value/></span>
                 </div>
               </div>
             </div>
@@ -97,9 +97,9 @@
               </div>
             </div>
           </div>
-          <q-list no-border :dark="theme == 'dark'" class="scala-list">
+          <q-list no-border :dark="theme == 'dark'" class="Holoyolo-list">
             <q-item-label class="contributors-title">{{ $t("strings.serviceNodeDetails.contributors") }}:</q-item-label>
-            <q-item v-for="contributor in contributors" :key="contributor.address" class="scala-list-item">
+            <q-item v-for="contributor in contributors" :key="contributor.address" class="Holoyolo-list-item">
               <q-item-label>
                 <q-item-label v-if="isMe(contributor)" class="name non-selectable">{{ $t("strings.me") }}</q-item-label>
                 <q-item-label v-else class="name non-selectable">{{ contributor.name }}</q-item-label>
@@ -107,7 +107,7 @@
                 <q-item-label class="non-selectable" caption>
                   <span v-if="isOperator(contributor)">{{ $t("strings.operator") }} • </span>
                   {{ $t("strings.contribution") }}:
-                  <FormatScala :amount="contributor.amount" raw-value />
+                  <FormatHoloyolo :amount="contributor.amount" raw-value />
                 </q-item-label>
               </q-item-label>
               <q-menu context-menu>
@@ -135,11 +135,11 @@
 const { clipboard } = require("electron");
 import { mapState } from "vuex";
 import { date } from "quasar";
-import FormatScala from "components/format_scala";
+import FormatHoloyolo from "components/format_Holoyolo";
 export default {
   name: "ServiceNodeDetails",
   components: {
-    FormatScala
+    FormatHoloyolo
   },
   props: {
     unlock: {
